@@ -1,0 +1,35 @@
+h1{
+    color: #7e0d8d;
+}
+.login-form{
+    background-color: white;
+    border-radius: 30px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 0 20px black;
+
+}
+body{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+.login-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #8c1aff;
+    color: white;
+    border-radius: 3px; 
+    border: none; 
+}
+.login-form #Email{
+    width: 80%;
+    height: 20px;
+}
+.login-form #Password{
+    width: 80%;
+    height: 20px;
+}
