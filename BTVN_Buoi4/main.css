@@ -1,0 +1,124 @@
+body{
+    background-color: blanchedalmond;
+    height: vh;
+    margin-top: 0;
+}
+.full{
+    width: 400px;
+    height: auto;
+    background-color: whitesmoke;
+    margin-left: 450px;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid rgb(195, 193, 193);
+}
+.anh img{
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+}
+.product-name{
+    color: rgb(20, 163, 163);
+    margin: 2px;
+}
+.bio{
+    margin: 2px;
+}
+.price{
+    color: green;
+    margin: 5px;
+}
+.fa-solid.fa-star#rate,.fa-regular.fa-star#rate{
+    color: orange;
+}
+.feature,.information-bonus{
+    background-color: rgb(217, 213, 213);
+    padding: 5px;
+    border-radius: 15px;
+    font-size: 15px;
+}
+.add{
+    background-color: orangered;
+    color: white;
+    margin-top: 20px;
+    border-radius: 10px;
+    padding: 8px;
+    border: none;
+}
+.information-bonus.refund{
+    width: 150px;
+    background-color: rgb(217, 213, 213);
+    padding: 5px;
+    border-radius: 15px;
+    font-size: 15px;
+}
+.function{
+    color: rgb(62, 126, 223);
+}
+.fa-solid.fa-circle-check{
+    color: rgb(62, 126, 223);
+    margin-right: 10px;
+    margin-bottom: 0px;
+}
+.tutorial,#tutorial-icon{
+    color: rgb(240, 113, 9);
+    margin-right: 10px;
+}
+.tutorial-bio{
+    font-weight: bolder;
+}
+.tutorial-text{
+    color: blueviolet;
+}
+.special,#special-icon{
+    color: red;
+    margin-right: 10px;
+}
+.special-text{
+    color: rgb(22, 127, 179);
+}
+.facebook{
+    background-color: #3B5998;
+    color: white;
+}
+.twitter{
+    background-color: #1DA1F2;
+    color: white;
+}
+.instagram{
+    background-color: #CD486B;
+    color: white;
+}
+.facebook,.twitter,.instagram{
+    border-radius: 3px;
+    padding: 5px;
+    border: none;
+}
+#rating-text{
+    width: 380px;
+    height: 70px;
+    border: 1px solid rgb(195, 193, 193);
+    border-radius: 5px;
+}
+.feedback-button{
+    background-color: #1DA1F2;
+    color: white;
+    margin-top: 10px;
+    border-radius: 3px;   
+    border: none;
+    padding: 8px;
+}
+.anh-sanphamb,.anh-sanphamc{
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+}
+.related-product{
+    margin-left: 450px;
+}
+.price-sanphamb,.price-sanphamc{
+    color: green;
+}
+.sanphamb-text,.sanphamc-text{
+    margin-right: 260px;
+}
