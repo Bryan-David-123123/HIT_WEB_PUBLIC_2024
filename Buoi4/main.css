@@ -1,0 +1,33 @@
+body{
+    background-color: pink;
+    height: 100vh;
+}
+.full{
+    width: 600px;
+    background-color: white;
+    height: auto;
+    padding: 40px;
+    border-radius: 20px;
+    margin-left: 300px;
+}
+.anh img{
+    width: 100%;
+    height: 300px;
+    border-radius: 15px;
+}
+.outofpreparetime_components{
+    background-color: rgb(245, 230, 232);
+    border-radius: 5px;
+}
+.preparetime_components{
+    margin: 10px
+}
+.preparation-heading, .ingredients-heading, .instructions-heading, .nutrition-heading{
+    font-family: "Young Serif", serif;
+    font-weight: 600;
+    font-style: normal;
+    color: rgba(108, 16, 47, 0.724);  
+}
+.ten_menu{
+    font-family: 'Times New Roman', Times, serif;
+}
