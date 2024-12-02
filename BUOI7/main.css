@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 576px) {
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .clubname {
+        color: #F06C25;
+    }
+
+    .banner {
+        width: 100%;
+        height: auto;
+    }
+
+    .about {
+        font-family: Baloo 2;
+        font-weight: 600;
+        line-height: 76.9px;
+        text-align: center;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+
+    }
+
+    .welcome {
+        color: #F06C25;
+        font-family: Baloo 2;
+        font-size: 26px;
+        font-weight: 600;
+        line-height: 51.26px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        text-align: center;
+    }
+
+    .introduce {
+        font-family: Baloo 2;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 32.04px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: #000000;
+        text-align: center;
+    }
+    .nav{
+        text-align: center;
+    }
+    .frame2{
+        margin:50px 0;
+        text-align: center;
+    }
+    .activities, .anh1, .anh2, .anh3, .anh4, .anh5, .anh6, .anh7{
+        margin:20px 0;
+    }
+    .anh7{
+        width: 90%;
+        height: auto;
+    }
+    .footer{
+        border-top: 1px solid #F06C25;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+    }
+}
