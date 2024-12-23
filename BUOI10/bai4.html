@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let x = prompt("Nhap cac so: ");
+        let a = x.split(",").map(num => parseFloat(num.trim()));
+        for (let i = 0; i < a.length; i++) {
+            for (let j = i + 1; j < a.length; j++) {
+                if (a[i] > a[j]) {
+                    let tmp = a[i];
+                    a[i] = a[j];
+                    a[j] = tmp;
+                }
+            }
+        }
+        alert(`So lon nhat: ${a[a.length - 1]}`);
+        alert(`So nho nhat: ${a[0]}`);
+        let count = 0;
+        let sum = 0;
+        for (let i = 0; i < a.length; i++) {
+            if (a[i] % 2 == 0) {
+                sum += a[i];
+                count += 1;
+            }
+        }
+        alert(`So so chan: ${count}`);
+        alert(`Tong so chan: ${sum}`);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let month = prompt("Nhập tháng:");
+        month=month.toLowerCase();
+        let res = "";
+        for (let i = 0; i < month.length; i++) {
+            if (i == 0) {
+                res += month[i].toUpperCase();
+            }
+            else {
+                res += month[i];
+            }
+        }
+        if (res == "January" || res == "March" || res == "May" || res == "July" || res == "August" || res == "October" || res == "December") {
+            alert(`${res} has 31 days`);
+        } else if (res == "April" || res == "June" || res == "September" || res == "November") {
+            alert(`${res} has 30 days`);
+        } else if (res == "February") {
+            alert(`${res} has 28 days`);
+        } else {
+            alert("Khong hop le");
+        }
+    </script>
+</body>
+
+</html>

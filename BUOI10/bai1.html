@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let day = prompt("Hôm nay là ngày gì?");
+        day = day.toLowerCase();
+        let tmp = "";
+        for (let i = 0; i < day.length; i++) {
+            if (i == 0) {
+                tmp += day[i].toUpperCase();
+            }
+            else{
+                tmp += day[i];
+            }
+        }
+        if (tmp == 'Saturday' || tmp == 'Sunday') {
+            alert(`${tmp} is a weekend`);
+        }
+        else if (tmp == 'Monday' || tmp == 'Tuesday' || tmp == 'Wednesday' || tmp == 'Thursday' || tmp == 'Friday') {
+            alert(`${tmp} is a working day`);
+        }
+        else {
+            alert("Khong hop le");
+        }
+    </script>
+</body>
+
+</html>

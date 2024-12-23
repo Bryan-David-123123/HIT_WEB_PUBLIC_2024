@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Tôi muốn đón giáng sinh nhiều mình nên sẽ không làm bài này ^-^ -->
+    <script>
+        let res = "*";
+        let space = [" ", " ", " ", " ", " "];
+        for (let i = 0; i < 6; i++) {
+            let tmp = "";
+            for (let j = 0; j < 5 - i; j++) {
+                tmp += space[j];
+            }
+            console.log(tmp + res);
+            res += "**";
+        }
+        let tmp = "";
+        for (let j = 0; j < 5; j++) {
+            tmp += space[j];
+        }
+        console.log(tmp + '*');
+        console.log(tmp + '*');
+        let t="";
+        for (let j = 0; j < 4; j++) {
+            t += space[j];
+        }
+        console.log(t + '***');
+    </script>
+</body>
+
+</html>
