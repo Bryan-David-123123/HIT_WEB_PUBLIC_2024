@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #1E1E2F;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            width: 440px;
+            background-color: #2C2C54;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .heading {
+            color: #FFDD59;
+        }
+
+        input {
+            width: 370px;
+            height: 36px;
+            background-color: #1E272E;
+            border: 2px solid #575FCF;
+            border-radius: 6px;
+            color: white;
+        }
+
+        button {
+            width: 60px;
+            height: 34px;
+            background-color: #05C46B;
+            color: #1E1E44;
+            border-radius: 6px;
+            border: none;
+        }
+
+        .result {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="heading">Palindrome Checker v1.0</h1>
+        <input type="text" placeholder="Enter a string ...">
+        <p></p>
+        <button>Check</button>
+        <div class="output"></div>
+        <div class="result"></div>
+    </div>
+    <script>
+        //Lay thong tin
+        const btn = document.querySelector('button');
+        const inpt = document.querySelector('input');
+        const container = document.querySelector('.container');
+        const output = document.querySelector('.output');
+        const result = document.querySelector('.result');
+        let check = 0;
+        btn.addEventListener('click', function () {
+            //Xoa ket qua cu
+            check = 0;
+            output.innerHTML = '';
+            result.innerHTML = '';
+            const str = inpt.value;
+            //In ra dong thong bao
+            const notice = document.createElement('h3');
+            //Object css cho o dung
+            const details_right = {
+                backgroundColor: '#0BE881',
+                fontSize: 'x-large',
+                fontWeight: '800',
+                width: '34px',
+                height: '32px',
+                borderRadius: '6px',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                textAlign: 'center',
+            }
+            //Object css cho o sai
+            const details_wrong = {
+                backgroundColor: '#FF3F34',
+                fontSize: 'x-large',
+                fontWeight: '800',
+                width: '34px',
+                height: '32px',
+                borderRadius: '6px',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                textAlign: 'center',
+            }
+            //Truong hop khong nhap gi ca
+            if (str.trim() === '') {
+                notice.textContent = 'Hay nhap dung chuoi ky tu';
+                notice.style.color = 'white';
+                output.appendChild(notice);
+            } else {
+                //Truong hop dau vao hop le
+                for (let i = 0; i <= str.length - 1; i++) {
+                    const char = document.createElement('span');
+                    if (i <= str.length / 2 - 1 || i >= str.length / 2) {
+                        //Xu ly cac o doi xung nhau
+                        if (str[i] === str[str.length - (i + 1)]) {
+                            Object.assign(char.style, details_right);
+                            char.textContent = str[i];
+                            result.appendChild(char);
+                        } else {
+                            //Xu ly truong hop o o giua doi voi chuoi co le ky tu
+                            Object.assign(char.style, details_wrong);
+                            char.textContent = str[i];
+                            result.appendChild(char);
+                            check = 1;
+                        }
+                    } else {
+                        Object.assign(char.style, details_right);
+                        char.textContent = str[i];
+                        result.appendChild(char);
+                    }
+                }
+                if (check == 0) {
+                    notice.textContent = 'Day la palindrome!';
+                    notice.style.color = 'white';
+                    output.appendChild(notice);
+                } else {
+                    notice.textContent = 'Day khong phai palindrome!';
+                    notice.style.color = 'white';
+                    output.appendChild(notice);
+                }
+            }
+        })
+        document.addEventListener('keypress', function (e) {
+            if (e.key === "Enter") {
+                btn.click();
+            }
+        })
+    </script>
+</body>
+
+</html>
