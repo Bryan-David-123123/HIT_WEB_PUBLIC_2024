@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="background">
+        <h1>Search Pokemon v1.0</h1>
+        <div class="content">
+            <input type="text" placeholder="Enter Pokemon name">
+            <button>Search</button>
+        </div>
+        <div class="output"></div>
+    </div>
+    <script>
+        const inpt = document.querySelector('.content>input');
+        const btn = document.querySelector('.content>button');
+        const output = document.querySelector('.output');
+        btn.addEventListener('click', function () {
+            const ten_pokemon = inpt.value;
+            data(ten_pokemon);
+        })
+        async function data(ten_pokemon) {
+            const a = {};
+            const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${ten_pokemon}`);
+            const obj = await response.json();
+            if (response.status == 404) {
+                output.innerHTML = "Not found";
+                return;
+            }
+            console.log(obj);
+            const ten = obj.species.name;
+            const id = obj.id;
+            const height = obj.height;
+            const weight = obj.weight;
+            const type=obj.types[0].type.name;
+            const anh=obj.sprites.front_default;
+            a.name=ten;
+            a.id=id;
+            a.height=height;
+            a.weight=weight;
+            a.type=type;
+            a.anh=anh;
+            console.log(a);
+            display(a);
+        }
+        document.addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {
+                btn.click();
+            }
+        })
+        function display(a) {
+            output.innerHTML = `
+            <div class="pokemon">
+                <img src="${a.anh}" alt="">
+                <div class="detail">
+                    <h2>${a.name}</h2>
+                    <p>Id: ${a.id}</p>
+                    <p>Height: ${a.height}</p>
+                    <p>Weight: ${a.weight}</p>
+                    <p>Type: ${a.type}</p>
+                </div>
+            </div>
+            `
+        }
+    </script>
+</body>
+
+</html>
